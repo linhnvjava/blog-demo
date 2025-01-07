@@ -14,6 +14,11 @@ export default defineNuxtConfig({
       }
   },
   sourcemap: false,
+  nitro: {
+    prerender: {
+      ignore: ['/authors/'],
+    },
+  },
   content: {
     // Configuring code highlighting
     // https://content.nuxtjs.org/api/configuration

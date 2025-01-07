@@ -6,8 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Headings */
-
 h1 {
     @apply text-h1_sm leading-h1_sm mb-6;
 }
@@ -54,4 +52,78 @@ h5 {
 
 p {
     @apply text-base leading-base;
+}
+
+/* Blog Headings */
+
+.blog-content h1 {
+    @apply mt-16;
+}
+
+.blog-content h2 {
+    @apply mt-8;
+}
+
+.blog-content h3 {
+    @apply mt-6;
+}
+
+.blog-content h4 {
+    @apply mt-4;
+}
+
+.blog-content h5 {
+    @apply mt-4;
+}
+
+/* Blog Content */
+
+.blog-content > p + p,
+.blog-content > ul + p,
+.blog-content > ol + p,
+.blog-content > p + ul,
+.blog-content > p + ol {
+    @apply mt-4;
+}
+
+/* Blog Body */
+
+.blog-content p,
+.blog-content ol,
+.blog-content ul {
+    @apply text-lg leading-h5;
+}
+
+/* Blog Breadcrumbs */
+
+.blog-breadcrumb {
+    @apply inline-block text-center font-light;
+}
+
+.blog-breadcrumb > span {
+    @apply mx-1 inline;
+}
+
+.blog-breadcrumb > li {
+    @apply inline;
+}
+
+.blog-breadcrumb > li a {
+    @apply text-brand_primary;
+}
+
+.blog-breadcrumb > li a:hover {
+    @apply underline;
+}
+
+/* Blog Aside */
+
+.blog-aside-title {
+    @apply uppercase font-extrabold text-xs leading-xs;
+}
+
+/* Blog Links */
+
+.blog-content :not(h1):not(h2):not(h3):not(h4):not(h5) a {
+    @apply underline font-bold text-brand_primary;
 }
