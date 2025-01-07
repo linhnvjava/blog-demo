@@ -117,7 +117,9 @@ const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
 });
 
 // Get the authors
-const { data: authorData } = await useAsyncData('home', () => queryContent('/authors').findOne());
+const baseURL = process.env.BASE_URL || '';
+console.log(baseURL);
+const { data: authorData } = await useAsyncData('home', () => queryContent(`${baseURL}/authors`).findOne());
 
 // Set the meta
 const baseUrl = 'https://example.com';
